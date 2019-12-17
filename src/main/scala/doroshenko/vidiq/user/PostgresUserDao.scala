@@ -13,13 +13,18 @@ class PostgresUserDao[F[_]: Bracket[*[_], Throwable]](
 ) extends UserDao[F] {
 
   override def save(user: User): F[User] = {
-    Queries.insert(user).withUniqueGeneratedKeys[Long]("id").map(id => user.copy(id = id.some)).transact(xa)
+    Queries.insert(user)
+      .withUniqueGeneratedKeys[Long]("id")
+      .map(id => user.copy(id = id.some))
+      .transact(xa)
   }
 
   override def getByEmail(email: String): OptionT[F, User] = OptionT(Queries.byEmail(email).option.transact(xa))
 
   override def delete(email: String): OptionT[F, Unit] = {
-    OptionT(Queries.delete(email).run.transact(xa).map(rows => if (rows == 1) Some(()) else None))
+    OptionT(Queries.delete(email)
+      .run.transact(xa)
+      .map(rows => if (rows == 1) Some(()) else None))
   }
 
   private object Queries {
