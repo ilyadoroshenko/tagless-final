@@ -12,3 +12,13 @@ app {
   }
   reqResApiBase="https://reqres.in/api"
 }
+
+test {
+  db {
+    url="jdbc:postgresql:reqres_test"
+    user="postgres"
+    password="123456"
+    driver="org.postgresql.Driver"
+    poolSize = 10
+  }
+}

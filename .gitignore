@@ -75,5 +75,6 @@ fabric.properties
 ### Scala ###
 *.class
 *.log
+*.conf
 
 # End of https://www.gitignore.io/api/scala,intellij
