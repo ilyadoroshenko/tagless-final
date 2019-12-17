@@ -35,4 +35,6 @@ libraryDependencies ++= Seq(
 
 addCompilerPlugin("org.typelevel" %% "kind-projector" % "0.11.0" cross CrossVersion.full)
 
+mainClass in reStart := Some("doroshenko.vidiq.Main")
+
 scalacOptions ++= Seq("-deprecation", "-Ymacro-annotations")

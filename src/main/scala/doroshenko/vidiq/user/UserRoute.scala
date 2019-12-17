@@ -16,7 +16,7 @@ class UserRoute[F[_]: Sync](
 
   private implicit val decoder: EntityDecoder[F, UserRequest] = jsonOf
 
-  private val handleError: PartialFunction[UserError, F[Response[F]]] = {
+  private def handleError(error: UserError): F[Response[F]] = error match {
     case EmailNotFound(email) => NotFound(ErrorResponse(s"User with email $email not found").asJson)
     case AlreadyExists(email) => BadRequest(ErrorResponse(s"User with email $email already exists").asJson)
     case IdNotFound(id) => NotFound(ErrorResponse(s"User with id $id not found").asJson)
