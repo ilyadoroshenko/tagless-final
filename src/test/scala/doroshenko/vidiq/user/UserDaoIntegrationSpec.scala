@@ -7,7 +7,7 @@ class UserDaoIntegrationSpec extends IntegrationSpec {
 
   ".create()" should {
     "return user with populated id field" in new ctx {
-      val user = User(None, "ann20@mail.com", "ann", "smith", 42)
+      val user = User(None, "ann@mail.com", "ann", "smith", 42)
 
       val savedUser = dao.save(user).unsafeRunSync()
 
@@ -16,7 +16,7 @@ class UserDaoIntegrationSpec extends IntegrationSpec {
     }
 
     "persist user for further queries" in new ctx {
-      val user = User(None, "ann30@mail.com", "ann", "smith", 42)
+      val user = User(None, "ann@mail.com", "ann", "smith", 42)
 
       val savedUser = dao.save(user).unsafeRunSync()
       val fetchedUser = dao.getByEmail(user.email).value.unsafeRunSync()
