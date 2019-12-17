@@ -26,7 +26,7 @@ object Main extends IOApp{
         conf.db.driver, conf.db.url, conf.db.user, conf.db.password, connEc, Blocker.liftExecutionContext(txnEc))
       httpClient <- BlazeClientBuilder(global).resource
 
-      reqResService = new HttpReqResService(httpClient)
+      reqResService = new HttpReqResService(httpClient, conf.reqResApiBase)
       userDao = new PostgresUserDao(xa)
       userService = new DefaultUserService(userDao, reqResService)
       userRoute = new UserRoute(userService)

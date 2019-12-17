@@ -12,13 +12,14 @@ import org.http4s.{EntityDecoder, Request, Uri}
 
 
 class HttpReqResService[F[_]: Sync](
-  client: Client[F]
+  client: Client[F],
+  reqResApiBase: Uri
 ) extends ReqResService[F] {
 
   private implicit val decoder: EntityDecoder[F, ReqResResponse] = jsonOf
 
   override def getById(id: Long): EitherT[F, ReqResUserNotFound, ReqResUser] = {
-    val req: Request[F] = Request(GET, Uri.fromString(s"https://reqres.in/api/users/$id").getOrElse(???))
+    val req: Request[F] = Request(GET, reqResApiBase / "users" / id.toString)
 
     val res = client.expectOption[ReqResResponse](req).map(_.map(_.data))
 
