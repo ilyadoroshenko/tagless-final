@@ -1,4 +1,4 @@
-package doroshenko.vidiq.config
+package taglessfinal.config
 
 import org.http4s.Uri
 

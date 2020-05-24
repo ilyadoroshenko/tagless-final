@@ -1,4 +1,4 @@
-name := "reqres"
+name := "tagless-final"
 version := "0.1"
 scalaVersion := "2.13.1"
 
@@ -35,6 +35,6 @@ libraryDependencies ++= Seq(
 
 addCompilerPlugin("org.typelevel" %% "kind-projector" % "0.11.0" cross CrossVersion.full)
 
-mainClass in reStart := Some("doroshenko.vidiq.Main")
+mainClass in reStart := Some("taglessfinal.Main")
 
 scalacOptions ++= Seq("-deprecation", "-Ymacro-annotations")

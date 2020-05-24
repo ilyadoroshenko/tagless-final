@@ -1,4 +1,4 @@
-package doroshenko.vidiq.user
+package taglessfinal.user
 
 sealed trait UserError
 case class EmailNotFound(email: String) extends UserError

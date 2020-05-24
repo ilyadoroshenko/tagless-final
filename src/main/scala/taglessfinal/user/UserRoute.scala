@@ -1,8 +1,8 @@
-package doroshenko.vidiq.user
+package taglessfinal.user
 
 import cats.effect.Sync
 import cats.implicits._
-import doroshenko.vidiq.routing.ErrorResponse
+import taglessfinal.routing.ErrorResponse
 import io.circe.generic.auto._
 import io.circe.syntax._
 import org.http4s.circe._

@@ -1,9 +1,9 @@
-package doroshenko.vidiq.user
+package taglessfinal.user
 
 import io.circe.Decoder
 import io.circe.generic.extras.ConfiguredJsonCodec
 import io.circe.generic.semiauto._
-import doroshenko.vidiq.routing.Protocol._
+import taglessfinal.routing.Protocol._
 
 @ConfiguredJsonCodec
 case class UserRequest(email: String, userId: Long)

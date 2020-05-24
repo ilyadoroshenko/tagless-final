@@ -1,4 +1,4 @@
-package doroshenko.vidiq.reqres
+package taglessfinal.reqres
 
 
 import cats.data.{EitherT, OptionT}

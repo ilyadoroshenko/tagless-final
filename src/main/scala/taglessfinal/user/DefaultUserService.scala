@@ -1,8 +1,8 @@
-package doroshenko.vidiq.user
+package taglessfinal.user
 
 import cats._
 import cats.data.EitherT
-import doroshenko.vidiq.reqres.{ReqResService, ReqResUser}
+import taglessfinal.reqres.{ReqResService, ReqResUser}
 
 class DefaultUserService[F[_]: Monad](
   val dao: UserDao[F],

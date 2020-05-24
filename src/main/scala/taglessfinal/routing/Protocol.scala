@@ -1,4 +1,4 @@
-package doroshenko.vidiq.routing
+package taglessfinal.routing
 
 import io.circe.generic.extras.Configuration
 

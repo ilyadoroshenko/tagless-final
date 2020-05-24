@@ -1,9 +1,7 @@
-package doroshenko.vidiq.user
+package taglessfinal.user
 
 import cats.data.EitherT
 import cats.effect.IO
-import doroshenko.vidiq.BaseSpec
-import io.circe.generic.auto._
 import io.circe.syntax._
 import org.http4s.Method._
 import org.http4s.Status._
@@ -11,6 +9,7 @@ import org.http4s.circe._
 import org.http4s.implicits._
 import org.http4s.{EntityDecoder, Request}
 import org.mockito.Mockito._
+import taglessfinal.BaseSpec
 
 class UserRouteSpec extends BaseSpec{
 

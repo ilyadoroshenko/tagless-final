@@ -1,7 +1,7 @@
-package doroshenko.vidiq.reqres
+package taglessfinal.reqres
 
 import io.circe.generic.extras.ConfiguredJsonCodec
-import doroshenko.vidiq.routing.Protocol._
+import taglessfinal.routing.Protocol._
 
 @ConfiguredJsonCodec
 case class ReqResUser(id: Long, firstName: String, lastName: String)

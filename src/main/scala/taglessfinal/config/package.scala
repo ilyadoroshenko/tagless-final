@@ -1,4 +1,4 @@
-package doroshenko.vidiq
+package taglessfinal
 
 import io.circe.Decoder
 import io.circe.generic.semiauto._

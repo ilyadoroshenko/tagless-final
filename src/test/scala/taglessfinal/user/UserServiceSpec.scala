@@ -1,11 +1,11 @@
-package doroshenko.vidiq.user
+package taglessfinal.user
 
 import cats.data.{EitherT, OptionT}
 import cats.effect.IO
-import doroshenko.vidiq.BaseSpec
-import doroshenko.vidiq.reqres.{ReqResService, ReqResUser, ReqResUserNotFound}
 import org.mockito.ArgumentMatchers._
 import org.mockito.Mockito._
+import taglessfinal.BaseSpec
+import taglessfinal.reqres.{ReqResService, ReqResUser, ReqResUserNotFound}
 
 class UserServiceSpec extends BaseSpec{
 

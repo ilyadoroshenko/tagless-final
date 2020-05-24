@@ -1,12 +1,12 @@
-package doroshenko.vidiq
+package taglessfinal
 
 import cats.effect.{ExitCode, IO, IOApp, _}
 import cats.implicits._
 import doobie.hikari.HikariTransactor
 import doobie.util.ExecutionContexts
-import doroshenko.vidiq.config.AppConfig
-import doroshenko.vidiq.reqres.HttpReqResService
-import doroshenko.vidiq.user.{DefaultUserService, PostgresUserDao, UserRoute}
+import taglessfinal.config.AppConfig
+import taglessfinal.reqres.HttpReqResService
+import taglessfinal.user.{DefaultUserService, PostgresUserDao, UserRoute}
 import io.circe.config._
 import org.http4s.client.blaze.BlazeClientBuilder
 import org.http4s.implicits._

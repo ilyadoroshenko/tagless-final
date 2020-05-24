@@ -1,3 +1,3 @@
-package doroshenko.vidiq.routing
+package taglessfinal.routing
 
 case class ErrorResponse(message: String)

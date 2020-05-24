@@ -1,4 +1,4 @@
-package doroshenko.vidiq
+package taglessfinal
 
 import org.scalatest.matchers.should.Matchers
 import org.scalatest.wordspec.AnyWordSpecLike

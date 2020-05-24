@@ -1,7 +1,7 @@
-package doroshenko.vidiq.user
+package taglessfinal.user
 
 import cats.effect.IO
-import doroshenko.vidiq.IntegrationSpec
+import taglessfinal.IntegrationSpec
 
 class UserDaoIntegrationSpec extends IntegrationSpec {
 

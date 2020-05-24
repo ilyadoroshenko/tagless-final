@@ -1,4 +1,4 @@
-package doroshenko.vidiq.user
+package taglessfinal.user
 
 import cats.data.OptionT
 
